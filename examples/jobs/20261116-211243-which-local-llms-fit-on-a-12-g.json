@@ -1,0 +1,27 @@
+{
+  "id": "20261116-211243-which-local-llms-fit-on-a-12-g",
+  "officer": "science",
+  "priority": 1,
+  "depth": "quick",
+  "brief": "Which local LLMs fit on a 12 GB RTX 3080 Ti for coding and general agent work, how large are they on disk at Q4, and which do guides recommend most?",
+  "requested_by": "nexus",
+  "created": "2026-11-16T21:12:43",
+  "urls": [
+    "https://www.promptquorum.com/prompt-bites/best-local-llm-coding-12gb-vram",
+    "https://www.betterclaw.io/blog/best-coding-model-12gb-vram",
+    "https://localaimaster.com/vram/best-coding-llm-12gb-vram",
+    "https://apxml.com/hardware/rtx-3080ti-12gb",
+    "https://llmconfigurator.com/en/best-models/rtx-3080-ti"
+  ],
+  "urls_only": true,
+  "finished": "2026-11-16T21:43:06",
+  "report": "Inbox\\fleet-reports\\2026-11-16-science-which-local-llms-fit-on-a-12-gb-rtx-3080.md",
+  "gate_passed": true,
+  "stats": {
+    "seconds": 83,
+    "model": "qwen3.5:9b",
+    "calls": 7,
+    "tokens_in": 18132,
+    "tokens_out": 6021
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "ollama_host": "http://127.0.0.1:11434",
+  "comfyui_host": "http://127.0.0.1:8188",
+  "reports_dir": "Inbox/fleet-reports",
+  "watch_interval_seconds": 60,
+  "review": {
+    "drive_dirs": [
+      "C:/Users/<you>/My Drive",
+      "G:/My Drive"
+    ],
+    "folder": "NEXUS Review",
+    "chrome": "C:/Program Files/Google/Chrome/Application/chrome.exe"
+  },
+  "search": {
+    "provider": "tavily",
+    "searxng_url": "http://127.0.0.1:8888"
+  },
+  "officers": {
+    "holo": {
+      "title": "Holo Officer",
+      "comfyui_dir": "C:/ComfyUI/ComfyUI_windows_portable",
+      "comfyui_python": "python_embeded/python.exe",
+      "output_dir": "Inbox/holo",
+      "width": 1024,
+      "height": 1024,
+      "max_count": 6,
+      "startup_timeout_seconds": 120
+    },
+    "engineer": {
+      "title": "Chief Engineer",
+      "model": "qwen2.5-coder:14b",
+      "num_ctx": 16384,
+      "temperature": 0.2,
+      "aider": "aider",
+      "whole_max_lines": 250,
+      "fix_rounds": 2,
+      "timeout_seconds": 1800
+    },
+    "science": {
+      "title": "Science Officer",
+      "model": "qwen3.5:9b",
+      "num_ctx": 16384,
+      "temperature": 0.3,
+      "think": false,
+      "orders": "officers/science-officer.md",
+      "depth": {
+        "quick": {
+          "queries": 3,
+          "results_per_query": 4,
+          "max_pages": 5
+        },
+        "standard": {
+          "queries": 5,
+          "results_per_query": 5,
+          "max_pages": 9
+        }
+      },
+      "page_chars": 7000
+    },
+    "architect": {
+      "title": "Fleet Architect",
+      "model": "gemma4:12b",
+      "num_ctx": 16384,
+      "temperature": 0.3,
+      "orders": "officers/architect.md"
+    }
+  }
+}

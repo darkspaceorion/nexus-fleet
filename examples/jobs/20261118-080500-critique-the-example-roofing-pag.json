@@ -1,0 +1,23 @@
+{
+  "id": "20261118-080500-critique-the-example-roofing-pag",
+  "officer": "architect",
+  "priority": 2,
+  "depth": "quick",
+  "brief": "Critique the Example Roofing page draft, a one-page site for a North Texas roofing contractor.",
+  "requested_by": "nexus",
+  "created": "2026-11-18T08:05:00",
+  "files": [
+    "Areas/Fleet/roster/workshop/20261118-063213-build-a-premium-single-page-we/Businesses/Agency/Site_Rebuilder/sites/example-roofing-engineer/index.html"
+  ],
+  "mode": "critique",
+  "finished": "2026-11-18T08:05:29",
+  "report": "Inbox\\fleet-reports\\2026-11-18-0805-architect-critique-critique-the-example-roofing-page-dra.md",
+  "gate_passed": false,
+  "stats": {
+    "seconds": 26,
+    "model": "gemma4:12b",
+    "calls": 1,
+    "tokens_in": 2567,
+    "tokens_out": 849
+  }
+}

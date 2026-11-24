@@ -1,0 +1,26 @@
+{
+  "id": "20261118-061600-write-a-command-line-python-sc",
+  "officer": "engineer",
+  "priority": 2,
+  "depth": "quick",
+  "brief": "Write a command-line Python script dash_check.py that finds and fixes em dashes (U+2014) and en dashes (U+2013). Scan the files or folders given as arguments (default: current folder, recursive), only .md, .html, .txt and .py files, skipping folders named .git, node_modules, Archive and __pycache__. Print each hit as path:line: <line trimmed to 120 chars>, then a total. Exit 1 if any hits, 0 if none. --fix rewrites only files that had hits, line by line. Fix rules, in order, applied to BOTH dash characters: (1) digit, dash, digit becomes digit-digit; (2) letter, dash, letter (no spaces) becomes 'letter, letter'; (3) any other dash together with the spaces and tabs directly next to it becomes ' - ', or '- ' at the start of the line after its indentation. Only touch the dash and the spaces directly around it: never change leading indentation, normal hyphens, other spacing or line endings. Read and write as UTF-8 and call sys.stdout.reconfigure(encoding='utf-8'). Standard library only. The test file Areas/Fleet/tests/test_dash_check.py is the spec: make it pass, do not edit it.",
+  "requested_by": "nexus",
+  "created": "2026-11-18T06:12:03",
+  "files": [
+    "Areas/Agentic_OS/tools/dash_check.py"
+  ],
+  "tests": [
+    "Areas/Fleet/tests/test_dash_check.py"
+  ],
+  "check": "python Areas/Fleet/tests/test_dash_check.py",
+  "finished": "2026-11-18T06:20:32",
+  "report": "Inbox\\fleet-reports\\2026-11-18-0620-engineer-write-a-command-line-python-script-dash.md",
+  "gate_passed": false,
+  "stats": {
+    "model": "qwen2.5-coder:14b",
+    "seconds": 354,
+    "calls": 12,
+    "tokens_in": 78800,
+    "tokens_out": 9540
+  }
+}
