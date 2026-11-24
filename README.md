@@ -10,6 +10,22 @@ Cloud models are excellent but every call costs money or plan allowance. A lot o
 
 So the design is: **local models do the volume, code checks what can be checked, and a frontier model (Claude, which I call NEXUS) reviews the rest.** Each agent's known limits are written down and dated, so I know what to trust.
 
+### Token usage and management
+
+A main goal was to spend fewer cloud tokens and keep track of the ones that do get spent:
+
+- **Bulk reading stays local.** Raw web pages, whole source files and screenshots go to the local model. Claude reads only the short report that comes back, not the material behind it. Its context stays small, and the usage limits on my plan last much longer.
+- **Every run records its tokens.** Each report header logs the model, run time, number of calls, and tokens in and out. Spend is measured, not guessed.
+- **Real numbers from the examples, all run locally:**
+
+| Job | Tokens in / out | Cloud cost |
+|---|---|---|
+| Research report, 5 web pages read | 18,132 / 6,021 | $0 |
+| Coding attempt via Aider | 78,800 / 9,540 | $0 |
+| Page critique with screenshots | 2,873 / 804 | $0 |
+
+- **Code checks before model checks.** The gates are plain Python with no model calls. Claude only spends tokens reviewing work that has already passed them.
+
 ## The crew
 
 | Officer | Job | Model | Gate (automatic checks before review) |
